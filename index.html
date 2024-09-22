@@ -11,14 +11,22 @@
       <h3 id="foodCount">Score: 0</h3>
       <button class="button" id="pause">Pause</button>
     </div>
-    <canvas id="snakeGame"></canvas>
+    <canvas id="snakeGame"> </canvas>
     <div class="controls">
-      <button class="button none" id="left">Left</button>
+      <button class="button none" id="left" title="controls">
+        <img width="30px" src="./svg/left-long-solid.svg" alt="left" />
+      </button>
       <div class="side">
-        <button class="button none" id="up">Up</button>
-        <button class="button none" id="down">Down</button>
+        <button class="button none" id="up" title="controls">
+          <img width="20px" src="./svg/up-long-solid.svg" alt="up" />
+        </button>
+        <button class="button none" id="down" title="controls">
+          <img width="20px" src="./svg/down-long-solid.svg" alt="down" />
+        </button>
       </div>
-      <button class="button none" id="right">Right</button>
+      <button class="button none" id="right" title="controls">
+        <img width="30px" src="./svg/right-long-solid.svg" alt="right" />
+      </button>
     </div>
     <div class="paused" id="pausedScreen">Paused</div>
     <div class="game-over" id="gameOverScreen">

@@ -32,10 +32,13 @@ canvas {
 }
 .none {
   display: none;
+  background-color: transparent;
+}
+img {
+  display: none;
 }
 h3 #foodCount {
   font-size: 20px;
-  z-index: 2;
 }
 .paused,
 .game-over {
@@ -52,13 +55,14 @@ h3 #foodCount {
   font-size: 25px;
   display: none; /* Initially hidden */
   flex-direction: column;
+  z-index: 2;
 }
 .game-over {
-  z-index: 3;
+  z-index: 4;
 }
 #pause {
   margin: 0;
-  z-index: 2;
+  z-index: 3;
 }
 #container {
   display: flex;
@@ -69,6 +73,7 @@ h3 #foodCount {
 }
 canvas {
   width: 40dvw;
+  z-index: 2;
 }
 @media (max-width: 430px) {
   .button {
@@ -82,6 +87,9 @@ canvas {
     width: 90dvw;
   }
   .none {
+    display: block;
+  }
+  img {
     display: block;
   }
   .side {
@@ -110,6 +118,9 @@ canvas {
     width: 90dvw;
   }
   .none {
+    display: block;
+  }
+  img {
     display: block;
   }
   .side {
