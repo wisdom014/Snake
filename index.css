@@ -1,0 +1,126 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  width: 100dvw;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+canvas {
+  border: 1px solid #000;
+  background-color: #fff;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 7px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.none {
+  display: none;
+}
+h3 #foodCount {
+  font-size: 20px;
+  z-index: 2;
+}
+.paused,
+.game-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  display: none; /* Initially hidden */
+  flex-direction: column;
+}
+.game-over {
+  z-index: 3;
+}
+#pause {
+  margin: 0;
+  z-index: 2;
+}
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90dvw;
+}
+#snakeGame {
+  width: 90dvw;
+  height: 90dvh;
+}
+@media (max-width: 428px) {
+  .button {
+    font-size: 10px; /* Smaller font size for mobile */
+    padding: 5px; /* Smaller padding */
+  }
+  #foodCount {
+    font-size: 12px; /* Smaller food count font size */
+  }
+  #snakeGame {
+    height: 70dvh;
+  }
+  .none {
+    display: block;
+  }
+  .side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .paused,
+  .game-over {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 429px) and (max-width: 834px) {
+  .button {
+    font-size: 16px; /* Smaller font size for mobile */
+    padding: 8px; /* Smaller padding */
+  }
+  #foodCount {
+    font-size: 18px; /* Smaller food count font size */
+  }
+  #snakeGame {
+    height: 68dvh;
+  }
+  .none {
+    display: block;
+  }
+  .side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .paused,
+  .game-over {
+    font-size: 23.5px;
+  }
+  #up {
+    margin-bottom: 20px;
+  }
+  #down {
+    margin-top: 20px;
+  }
+}
