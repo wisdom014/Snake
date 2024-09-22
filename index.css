@@ -65,8 +65,8 @@ h3 #foodCount {
   align-items: center;
   width: 90dvw;
 }
-#snakeGame {
-  width: 90dvw;
+canvas {
+  width: 70dvw;
   height: 90dvh;
 }
 @media (max-width: 428px) {
@@ -78,6 +78,7 @@ h3 #foodCount {
     font-size: 12px; /* Smaller food count font size */
   }
   #snakeGame {
+    width: 90dvw;
     height: 70dvh;
   }
   .none {
@@ -103,6 +104,7 @@ h3 #foodCount {
     font-size: 18px; /* Smaller food count font size */
   }
   #snakeGame {
+    width: 90dvw;
     height: 68dvh;
   }
   .none {

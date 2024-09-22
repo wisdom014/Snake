@@ -1,12 +1,19 @@
 const canvas = document.getElementById("snakeGame");
-const ctx = canvas.getContext("2d");
+const ctx = canvas.getContext("2d"); // Keep this line as is
 
-const box = 10;
-let snake = []; // Start with an empty snake
+const box = 10; // Fixed size for the snake and food in pixels
+canvas.width = 550; // Set a fixed width for the canvas
+canvas.height = 550; // Set a fixed height for the canvas
+
+// Calculate the number of boxes based on the canvas size
+const numBoxesX = Math.floor(canvas.width / box);
+const numBoxesY = Math.floor(canvas.height / box);
+
+let snake = [{ x: Math.floor(numBoxesX / 2) * box, y: Math.floor(numBoxesY / 2) * box }]; // Start with the snake in the center
 let direction = "RIGHT";
 let food = {
-    x: Math.floor(Math.random() * (canvas.width / box)) * box,
-    y: Math.floor(Math.random() * (canvas.height / box)) * box,
+    x: Math.floor(Math.random() * numBoxesX) * box,
+    y: Math.floor(Math.random() * numBoxesY) * box,
 };
 let foodCount = 0;
 let isPaused = false;
@@ -88,7 +95,7 @@ function draw() {
 
     // Draw snake
     for (let i = 0; i < snake.length; i++) {
-        ctx.fillStyle = (i === 0) ? "green" : "lightgreen";
+        ctx.fillStyle = (i === 0) ? "green" : "lightgreen"; // Head is green, body is light green
         ctx.fillRect(snake[i].x, snake[i].y, box, box);
         ctx.strokeStyle = "white";
         ctx.strokeRect(snake[i].x, snake[i].y, box, box);
