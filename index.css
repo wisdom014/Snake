@@ -69,7 +69,7 @@ h3 #foodCount {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 40dvw;
+  width: 90dvw;
 }
 canvas {
   width: 40dvw;
