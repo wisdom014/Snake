@@ -69,7 +69,7 @@ h3 #foodCount {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 90dvw;
+  width: 40dvw;
 }
 canvas {
   width: 40dvw;
@@ -84,6 +84,9 @@ canvas {
     font-size: 12px; /* Smaller food count font size */
   }
   #snakeGame {
+    width: 90dvw;
+  }
+  #container {
     width: 90dvw;
   }
   .none {
